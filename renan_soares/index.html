@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+    <html>
+    <head>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+       
+        
+        <title>Teste</title>
+        <link rel="stylesheet" href="$path_conteudo/css/libs/font-awesome.min.css" />
+        <link rel="stylesheet" href="$path_conteudo/css/libs/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="$path_conteudo/css/plugin/toastr.min.css"  />
+        <link rel="stylesheet" type="text/css" href="$path_conteudo/css/spinkit/spinkit.min.css" />
+        
+        <script>
+            $("#btn-mensagem").click(function(){
+                $("#modal-mensagem").modal();
+            });
+        </script>
+        <style>
+            .container{
+                width: 100%;
+                height: 100vh;
+                background-image: linear-gradient(10deg, #2f00ff,#fd6500 , #F9FAFB  );
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+            }
+            .box{
+                width: 800px;
+                height: 400px;
+                background: #fff;
+                text-align:center;
+            }
+            body{
+                margin:0;
+            }
+            .menu{
+                width: 100%;
+                background: #0267B5; 
+                display: flex; 
+                align-items: center;
+            }
+            .titulo{
+                color: white;
+            }
+            .box > div{
+                display: inline-block;
+                padding: 20px;
+                width: 41%;
+            }
+            .box > div > input{
+                width: 100%;
+                padding: 10px;
+                height: 80px;
+                cursor:pointer;
+                font-size: 20px;
+                color:white;
+                font-weight: bold;
+                background-image: linear-gradient(to right,#FD7726, #0267B5);
+            }
+
+            .box > div > input:hover{
+                opacity:0.7;   
+                background-image: linear-gradient(#0267B5,#FD7726,);       
+                -webkit-transition: all 200ms ease-in;
+                -ms-transition: all 200ms ease-in;
+                -moz-transition: all 200ms ease-in;
+                transition: all 200ms ease-in;
+            }
+            .img{
+                text-align: center;
+            }
+            .img > img{
+                padding: 20px;
+            }
+
+            @media only screen and (max-width: 600px) {
+                .box > div{
+                display: block;
+                padding: 20px;
+                width: 30%;
+                }
+                .container{
+                    display: block;
+                }
+            }
+
+            @media only screen and (max-width: 600px){
+                .container{
+                    display: block;
+                }
+                .box > div{
+                display: block;
+                padding: 20px;
+                width: 43%;
+                }
+            }
+        </style>
+
+    </head>
+    <body>
+        <header class="menu">
+            <h1 class="titulo">área de Acesso</h1></header>
+        <div class="container">
+            <div class="img">
+                <img src="imagens/logo_kabum.png">
+            <div class="box">
+
+                <div>
+                    <input type="button" value="Cadastrar" id="botaoCadastro" name="botaoCadastro">
+                </div>
+                <div>
+                    <input type="button" data-toggle="modal" data-target="#modal-mensagem"  value="Consultar" id="botaoCadastro" name="botaoCadastro">
+                </div>
+                <div>
+              <!--      <input type="button" value="Excluir" id="botaoCadastro" name="botaoCadastro">
+                </div>
+                <div>
+                    <input type="button"  value="Alterar" id="botaoCadastro" name="botaoCadastro">
+                </div> -->
+            </div>
+        </div>
+        </div>
+
+        <div class="modal fade" id="modal-mensagem">
+            <div class="modal-dialog">
+                 <div class="modal-content">
+                     <div class="modal-header">
+                         <button type="button" class="close" data-dismiss="modal"><span>×</span></button>
+                         <h4 class="modal-title">Título da mensagem</h4>
+                     </div>
+                     <div class="modal-body">
+                         <p>Conteúdo da mensagem</p>
+                     </div>
+                     <div class="modal-footer">
+                         <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                     </div>
+                 </div>
+             </div>
+         </div>
+        <script src='$path_conteudo/js/jquery.min.js'></script>
+        <script src='$path_conteudo/bootstrap-4.4/js/bootstrap.min.js'></script>
+        <script type="text/javascript" src="$path_conteudo/js/plugin/toastr.min.js"></script>
+        <script type="text/javascript" src="$path_conteudo/js/plugin/toastr.global.js"></script>
+        <!--Caminho do seu JS-->
+        <!--<script src='$path_conteudo/js/informatica/teste/index.js'></script>-->
+    </body>
+</html>
